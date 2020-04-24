@@ -14,7 +14,7 @@ def main():
         print(f"Flight {flight.id}: {flight.origin} to {flight.destination}, {flight.duration} minutes.")
 
     # Prompt user to choose a flight.
-    flight_id = int(input("\nFlight ID: "))
+    flight_id = int(input("\nFlight ID: ")) ## diorfeo :: Use of input function
     flight = db.execute("SELECT origin, destination, duration FROM flights WHERE id = :id",
                         {"id": flight_id}).fetchone()
 
